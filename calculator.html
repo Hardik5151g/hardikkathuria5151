@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: linear-gradient(to right, rgb(0, 119, 255), rgb(0, 208, 255), rgb(5, 214, 193), rgb(6, 238, 95), rgb(0, 255, 76)), rgb(197, 251, 20);
+        }
+        #call{
+            text-align: center;
+            height: 350px;
+            width: 230px;
+            border: 1px solid black;
+            border-radius: 15px;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(10, 10, 163);
+            position: relative;
+            top: 120px;
+            left: 40%;
+        }
+        input{
+            padding: 10px 15px;
+        }
+        .cal{
+            border: 1px solid black;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            margin-top: 23px;
+            padding-bottom: 15px;
+        }
+        .ink{
+            width: 100%;
+            height: 90px;
+            background-color: rgb(27, 27, 82);
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+        .btn{
+            height: 50px;
+            width: 50px;
+            font-size: 20px;
+            background-color: rgba(88, 89, 111, 0.938);
+            color: white;
+        }
+        .btn1{
+            margin-bottom: 8px;
+        }
+        .btn2{
+            margin-bottom: 8px;
+        }
+        .btn3{
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" id="call">
+       <div class="ink"> 
+        <input type="text" class="cal" disabled name="cal">
+       </div>
+        <br>
+
+        <input class="btn btn1" type="button" value="7" name="seven" onclick="call.cal.value += '7'">
+        <input class="btn btn1" type="button" value="8" name="eight" onclick="call.cal.value += '8'">
+        <input class="btn btn1" type="button" value="9" name="nine" onclick="call.cal.value += '9'">
+        <input class="btn btn1" type="button" value="C" name="none" onclick="call.cal.value = ''" style="background-color: red; color: white;">
+        <br>
+
+        <input class="btn btn2" type="button" value="4" name="four" onclick="call.cal.value += '4'">
+        <input class="btn btn2" type="button" value="5" name="five" onclick="call.cal.value += '5'">
+        <input class="btn btn2" type="button" value="6" name="six" onclick="call.cal.value += '6'">
+        <input class="btn btn2" type="button" value="X" name="mul" onclick="call.cal.value += '*'">
+        <br>
+
+        <input class="btn btn3" type="button" value="1" name="one" onclick="call.cal.value += '1'">
+        <input class="btn btn3" type="button" value="2" name="two" onclick="call.cal.value += '2'">
+        <input class="btn btn3" type="button" value="3" name="three" onclick="call.cal.value += '3'">
+        <input class="btn btn3" type="button" value="-" name="min" onclick="call.cal.value += '-'">
+        <br>
+
+        <input class="btn btn4" type="button" value="0" name="zero" onclick="call.cal.value += '0'">
+        <input class="btn btn4" type="button" value="." name="dot" onclick="call.cal.value += '.'">
+        <input class="btn btn4" type="button" value="=" name="eq" onclick="call.cal.value = eval(call.cal.value)">
+        <input class="btn btn4" type="button" value="+" name="plus" onclick="call.cal.value += '+' ">
+
+    </form>
+</body>
+</html>

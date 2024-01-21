@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fan</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            background-color: aqua;
+        }
+       
+        img{
+            height: 200px;
+            width: 200px;
+            position: relative;
+            top: 170px;
+            left: 40%;
+            background-color: aqua;
+        }
+        .buttons{
+            position: relative;
+            top: 180px;
+            left: 41%;
+            width: 200px; 
+            height: auto;
+        }
+        button{
+            padding: 10px;
+            gap: 10px;
+            background-color: chartreuse;
+            color: rgb(220, 56, 19);
+            border-radius: 4px;
+            font-size: 20px;
+        }
+        .fan-on{
+            animation: ani 1.5s linear infinite;
+        }
+        @keyframes ani {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .fan-one{
+            animation: ani 1s linear infinite;
+        }
+        .fan-two{
+            animation: ani 0.5s linear infinite;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="fan">
+        <img src="images/fan3-removebg-preview.png" alt="image of a fan">
+    </div>
+    
+    <div class="buttons">
+        <button onclick="OFF()">OFF</button>
+        <button onclick="ON()">ON</button>
+        <button onclick="one()">1</button>
+        <button onclick="two()">2</button>
+    </div>
+
+    <script>
+        let fan = document.querySelector("img")
+
+        function OFF(){
+            fan.classList.remove("fan-on")
+            fan.classList.remove("fan-one")
+            fan.classList.remove("fan-two")
+        }
+
+        function ON(){
+            fan.classList.add("fan-on")
+            fan.classList.remove("fan-one")
+            fan.classList.remove("fan-two")
+        }
+
+        function one(){
+            fan.classList.remove("fan-on")
+            fan.classList.add("fan-one")
+            fan.classList.remove("fan-two")
+        }
+
+        function two(){
+            fan.classList.remove("fan-on")
+            fan.classList.remove("fan-one")
+            fan.classList.add("fan-two")
+        }
+        // if (fan.classList.add("fan-on")) {
+        //     fan.classList.add("fan-one")
+        // }
+        // else {
+        //     fan.classList.remove("fan-one")
+        // }
+    </script>
+</body>
+</html>
